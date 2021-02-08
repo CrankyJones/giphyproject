@@ -1,16 +1,16 @@
 {
-  "name": "rpg",
+  "name": "giphyproject",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "build": "webpack --mode development",
-    "start": "npm run build; webpack-dev-server --open --mode development",
-    "lint": "eslint src/js/*.js",
+    "start": "npm run build & webpack-dev-server --open --mode development",
+    "lint": "eslint src/*.js",
     "test": "jest --coverage"
   },
   "keywords": [],
-  "author": "Micah L. Olson, Geof Rosenmund",
+  "author": "Dani Renner, Geof Rosenmund",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "7.6.4",
