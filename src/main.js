@@ -6,6 +6,8 @@ import './css/styles.css';
 $(document).ready(function () {
   $("#searchButton").click(function (event) {
     event.preventDefault();
+    $(".showGif").empty();
+    let result = [];
     const search = $('#search').val();
     $('#search').val("");
 
@@ -25,8 +27,9 @@ $(document).ready(function () {
     function getElements(response) {
       console.log(response);
       for (let x = 0; x < 4; x++) {
-        $('.showGif').append(`<img src=${response.data[x].url}>`);
-        console.log(`${response.data[x].url}`);
+        result.push((`<img src=${response.data[x].images.original.url}>`));
+        $(".showGif").append(result[x]);
+        console.log(result);
       }
     }
   });
